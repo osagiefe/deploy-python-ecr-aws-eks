@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecrpdeployment
+  labels:
+    app: ecrpdeployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ecrpdeployment
+  template:
+    metadata:
+      labels:
+        app: ecrpdeployment
+    spec:
+      containers:
+        - name: ecrpdeployment
+          image: 759623136685.dkr.ecr.eu-west-2.amazonaws.com/ecr-repoimg1:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
