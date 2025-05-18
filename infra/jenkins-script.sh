@@ -6,17 +6,6 @@ sudo apt upgrade -y
 
 sudo apt install -y docker.io
 
-# Add the current user to the 'docker' group 
-sudo chmod 777 /var/run/docker.sock
-
-# Start and enable Docker service
-sudo systemctl start docker
-sudo systemctl enable docker
-
-# Print Docker version
-docker --version
-echo "Waiting for 15 seconds before installing the aws cli..."
-sleep 15
 
 ## install aws cli
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" 
@@ -39,7 +28,30 @@ sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
 
 echo "Waiting for 29 seconds before installing the aws cli..."
-sleep 20
+sleep 15
+
+# install kubectl on the EC2 instance
+
+sudo curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.6/bin/linux/amd64/kubectl
+sudo chmod +x ./kubectl
+sudo mkdir -p $HOME/bin && sudo cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+kubectl version
+
+echo "Waiting for 30 seconds before installing the aws cli..."
+sleep 15
+
+# Add the current user to the 'docker' group 
+sudo chmod 777 /var/run/docker.sock
+
+# Start and enable Docker service
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Print Docker version
+docker --version
+
+echo "Waiting for 15 seconds before installing the aws cli..."
+sleep 15
 
 sudo apt install openjdk-17-jre -y
 
