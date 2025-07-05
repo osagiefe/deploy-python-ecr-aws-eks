@@ -41,11 +41,13 @@ echo "Waiting for 30 seconds before installing the aws cli..."
 sleep 15
 
 # Add the current user to the 'docker' group 
-sudo chmod 777 /var/run/docker.sock
 
+sudo apt install docker.io -y
 # Start and enable Docker service
 sudo systemctl start docker
 sudo systemctl enable docker
+sudo systemctl status docker
+sudo chmod 777 /var/run/docker.sock
 
 # Print Docker version
 docker --version
