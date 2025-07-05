@@ -53,6 +53,7 @@ $ docker run --name seb-container -dp port 5002:5002 <imagename>:latest
 to exec into the container
 
  $ docker exec seb-container -- sh
+
  $ exit
 
 #### Step 3
@@ -64,16 +65,23 @@ dockerImage = docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}"
 #### Step 4
 
 to provision ec2 instance called jenkins-server using terraform
+
  $ cd infra
+
  $ ls
 
 <img width="472" height="604" alt="Image" src="https://github.com/user-attachments/assets/30b0a3c4-bbce-46c7-9371-db77f14027b4" />
 
  #### Step 5
+
  To run terraform commands
+
   $ terraform init
+
   $ terraform fmt
+
   $ terraform plan
+  
   $ terraform apply --auto-approve
 
 
