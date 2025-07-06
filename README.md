@@ -144,11 +144,12 @@ screenshots backend.tf
   Now, run the below command to create the infrastructure on AWS Cloud.
 
   $ terraform apply --auto-approve
-
+####
   <img width="1882" height="920" alt="Image" src="https://github.com/user-attachments/assets/845a8abe-9d01-4458-b627-c12c3fe64bc9" />
 
   <img width="2154" height="1334" alt="Image" src="https://github.com/user-attachments/assets/1c451af4-2830-4d11-a43b-b0b0c7703f39" />
 
+  ####
   Now, connect to your Jenkins-Server by clicking on Connect, and connect to jenkins server using ssh.
 
   <img width="2708" height="1286" alt="Image" src="https://github.com/user-attachments/assets/142972c8-c8d9-4354-a6a7-59c1a8f96775" />
@@ -189,7 +190,9 @@ Click on Save and Finish.
 
 The Jenkins Dashboard will look like the below snippet.
 
-<img width="2158" height="1346" alt="Image" src="https://github.com/user-attachments/assets/60b22579-3048-47fe-bcdf-4419bae7a866" />
-
 
 <img width="2766" height="1370" alt="Image" src="https://github.com/user-attachments/assets/4b9cf74a-c465-4afb-8c2b-6b25bd637b7d" />
+
+install the plugins
+
+<img width="2722" height="1376" alt="Image" src="https://github.com/user-attachments/assets/1ae4ef85-6c89-4840-8a23-cf3df9f5665d" />
