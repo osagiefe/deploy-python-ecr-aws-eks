@@ -317,16 +317,15 @@ pipeline {
 Go to the application root directory in vscode and run the following commands
 
 
-
-
-
-Configure the Jenkins
+============
+#### STAGE 2
+==============
+#### step 1: Configure the Jenkins
 Now, we have to configure Jenkins. So, copy the public IP of your Jenkins Server and paste it on your favorite browser with an 8080 port.
 
 <img width="2724" height="364" alt="Image" src="https://github.com/user-attachments/assets/f247fa34-eba4-440a-a570-5a360f327864" />
 
-Now, we logged into our Jenkins server.
-screenshots
+#### step 2:Now, we logged into our Jenkins server.
 
 Click on Install suggested plugins
 
@@ -351,4 +350,25 @@ install the docker and amazon ecr plugins
 
 <img width="2520" height="1398" alt="Image" src="https://github.com/user-attachments/assets/574302cc-381b-4a00-aed1-4f7b3665e4fd" />
 
-#### create new project in jenkins
+#### step 3: create new project in jenkins
+
+<img width="1856" height="1296" alt="Image" src="https://github.com/user-attachments/assets/c4405e76-e803-477d-943c-c6b5dbe7e998" />
+
+<img width="2446" height="930" alt="Image" src="https://github.com/user-attachments/assets/556268a9-6b1a-4117-b28b-69c2e50aeb57" />
+
+
+
+#### step 4:CLEAN UP STAGE: REMOVE THE AWS EKS CLUSTER
+
+#####
+
+#### Delete EKS cluster
+
+eksctl delete cluster --name eks-cluster-204 --region eu-west-2
+
+
+#### step 5: DESTROY THE RESPURCES CREATED BY TERRAFORM
+Run the command
+$ terraform destroy --auto-approve
+
+<img width="1900" height="968" alt="Image" src="https://github.com/user-attachments/assets/9da14831-ed9e-4d52-9a45-0174ca5c843f" />
