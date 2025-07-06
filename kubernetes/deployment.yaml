@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ecrpdeployment
-          image: 759623136685.dkr.ecr.eu-west-2.amazonaws.com/ecr-repoimg1:v1
+          image: 759623136685.dkr.ecr.eu-west-2.amazonaws.com/ecr-repoimg1:1.0
           imagePullPolicy: Always
           ports:
             - containerPort: 5002
