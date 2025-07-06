@@ -64,10 +64,10 @@ i. $ python main.py
 ii. localhost:5002
 
 created a dockerfile to build docker image for the project
-
+####
 <img width="928" height="442" alt="Image" src="https://github.com/user-attachments/assets/7d2e4b58-7d21-455c-a9d2-3a8b1a07dd52" />
 
-
+####
 #### To build the application container locally
 
 $ docker run --name seb-container -dp port 5002:5002 <imagename>:latest
@@ -82,7 +82,7 @@ to exec into the container
 
 Install & Configure Terraform and AWS CLI on your local machine to create Jenkins Server on AWS Cloud
 
-Terraform Installation Script
+#### Terraform Installation Script
 
 wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg - dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 
