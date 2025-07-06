@@ -19,13 +19,14 @@ Initially, i had to provision the jenkins server using terraform (IAC).
 
 6.Amazon ECR Repositories: Create private repositories for Docker images on Amazon Elastic Container Registry (ECR).
 
-7. AWS CLI - installed on the jenkins server,enable you to interface with AWS infrastructure.
+7.AWS CLI - installed on the jenkins server,enable you to interface with AWS infrastructure.
 
-8. AWS configure - to insert Access-key and Secret-key, including Region and json format.
+8.AWS configure - to insert Access-key and Secret-key, including Region and json format.
 
-9. Docker - installed on jenkins server, to enable you build docker images
+9.Docker - installed on jenkins server, to enable you build docker images
 
 #### Prerequisites:
+
 Before starting the project, ensure you have the following prerequisites:
 
 -An AWS account with the necessary permissions to create resources.
@@ -47,7 +48,9 @@ https://github.com/clement2019/deploy-python-ecr-aws-eks.git
 #### STAGE 1
 ==============
 #### step 1: Python Flask application
+
 Created a python application,
+
 Collected all the project dependencies or libraries for the project and stored them inside "requirements.txt"
 
 pip freeze >> requirements.txt
@@ -55,6 +58,7 @@ pip freeze >> requirements.txt
 #### Step 2: Testing application lacally
 
 Run and test the project locally , to ensure it is working
+
 i. $ python main.py
 
 ii. localhost:5002
@@ -82,15 +86,19 @@ Terraform Installation Script
 
 wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg - dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 
-echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/
+
+hashicorp.list
 
 sudo apt update
 
 sudo apt install terraform -y
 
-AWSCLI Installation Script
+#### AWSCLI Installation Script
 
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o 
+
+"awscliv2.zip"
 
 sudo apt install unzip -y
 
@@ -98,7 +106,7 @@ unzip awscliv2.zip
 
 sudo ./aws/install
 
-Configure AWS CLI
+#### Configure AWS CLI
 
 Run the below command, and add your keys
 
@@ -115,9 +123,10 @@ $ cd infra
 
 Do some modifications to the backend.tf file such as changing the bucket name(make sure you have created trhe bucket manually on AWS Cloud).
 screenshots backend.tf
-
+####
 <img width="472" height="604" alt="Image" src="https://github.com/user-attachments/assets/30b0a3c4-bbce-46c7-9371-db77f14027b4" />
 
+####
  jenkins-server.tf 
 
 
@@ -130,10 +139,12 @@ screenshots backend.tf
  Initialize the backend by running the below command
 
   $ terraform init
+
    <img width="1602" height="420" alt="Image" src="https://github.com/user-attachments/assets/32b906a3-3c7c-4482-ac78-397f4fec9d76" />
 
 
   $ terraform fmt
+
   $ terraform validate
 
   Run the below command to get the blueprint of what kind of AWS services will be created.
