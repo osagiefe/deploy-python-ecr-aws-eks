@@ -19,4 +19,4 @@ spec:
           image: 759623136685.dkr.ecr.eu-west-2.amazonaws.com/ecr-repoimg1:v1
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 5002
