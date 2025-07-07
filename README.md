@@ -356,18 +356,19 @@ install the docker and amazon ecr plugins
 
 <img width="2446" height="930" alt="Image" src="https://github.com/user-attachments/assets/556268a9-6b1a-4117-b28b-69c2e50aeb57" />
 
+#### ===========================
+### CLEAN UP STAGE:
 
+#### ================
 
-#### step 4:CLEAN UP STAGE: REMOVE THE AWS EKS CLUSTER
-
-#####
+#### step 4: REMOVE THE AWS EKS CLUSTER
 
 #### Delete EKS cluster
 
 eksctl delete cluster --name eks-cluster-204 --region eu-west-2
 
 
-#### step 5: DESTROY THE RESPURCES CREATED BY TERRAFORM
+#### step 5: DESTROY THE RESOURCES CREATED BY TERRAFORM
 Run the command
 $ terraform destroy --auto-approve
 
