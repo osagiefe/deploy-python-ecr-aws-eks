@@ -194,15 +194,15 @@ kubectl version --client
 
 #### Create EKS cluster
 
-  eksctl create cluster --name eks-cluster-204 --node-type t2.small --nodes 1 
+  eksctl create cluster --name eks-cluster-100 --node-type t3.medium --nodes 2 
   
-  --nodes-min 1 --nodes-max 2 --region eu-west-2
+  --nodes-min 2 --nodes-max 3 --region us-east-1
 
   <img width="1930" height="944" alt="Image" src="https://github.com/user-attachments/assets/ed04e90c-ac10-4813-967c-ad9d025e7f30" />
 
 #### Get EKS Cluster service
 
-eksctl get cluster --name eks-cluster-204 --region eu-west-2
+eksctl get cluster --name eks-cluster-100 --region us-east-1
 
 
 <img width="2426" height="642" alt="Image" src="https://github.com/user-attachments/assets/f4fcd9a6-f9d2-4912-905b-256391f0388b" />
@@ -213,7 +213,7 @@ kubectl get pods --all-namespaces
 
 #### Delete EKS cluster
 
-eksctl delete cluster --name eks-cluster-204 --region eu-west-2
+eksctl delete cluster --name eks-cluster-100 --region us-east-1
 
 #### Step 7:Now we need to jenkins ability to integrate into aws infrastructure
 
