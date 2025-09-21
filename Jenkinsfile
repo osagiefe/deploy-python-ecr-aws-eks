@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        AWS_ACCOUNT_ID="***************"
-        AWS_DEFAULT_REGION="eu-west-2"
+        AWS_ACCOUNT_ID="861276106382"
+        AWS_DEFAULT_REGION="us-east-1"
         IMAGE_REPO_NAME="ecr-repoimg1"
         IMAGE_TAG="1.0"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
  
-                    git branch: 'master', url: 'https://github.com/clement2019/deploy-python-ecr-aws-eks.git' 
+                    git branch: 'master', url: 'https://github.com/osagiefe/deploy-python-ecr-aws-eks.git' 
                 }
             }
         }
@@ -50,7 +50,7 @@ pipeline {
           steps {
             script {
               dir('kubernetes') {
-              sh ('aws eks update-kubeconfig --name eks-cluster-204 --region eu-west-2')
+              sh ('aws eks update-kubeconfig --name eks-cluster-100 --region us-east-1')
               sh 'kubectl config current-context'
               sh "kubectl get ns"
               sh "kubectl apply -f deployment.yaml"

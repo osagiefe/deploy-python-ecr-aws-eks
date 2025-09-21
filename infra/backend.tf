@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "jenkins-automation-server"
-    region = "eu-west-2"
-    key    = "doploy-ecr/terraform.tfstate"
+    bucket = "aws-lagos-bucket"
+    region = "us-east-1"
+    key    = "deploy-ecr/terraform.tfstate"
   }
 }
