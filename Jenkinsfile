@@ -52,7 +52,7 @@ pipeline {
               dir('kubernetes') {
               sh ('aws eks update-kubeconfig --name eks-cluster-100 --region us-east-1')
               sh 'kubectl config current-context'
-              sh "kubectl get ns"
+              //sh "kubectl get ns"
               sh "kubectl apply -f deployment.yaml"
               sh "kubectl apply -f service.yaml"
         }
